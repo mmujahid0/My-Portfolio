@@ -1,0 +1,621 @@
+/* Resetting default margin, padding, font, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Setting background color and text color for the entire page */
+body {
+    background: #080808;
+    color: #fff;
+}
+
+/* Header section styling */
+/* Header section styling with animation */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/mujahid2.JPG);
+    background-size: cover;
+    background-position: center;
+    animation: expandShrink 10s infinite alternate; /* Adjust the duration and other properties as needed */
+}
+
+@keyframes expandShrink {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Container padding for content alignment */
+.container {
+    padding: 10px 10%;
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 1000; /* Adjust the value as needed */
+}
+
+nav a {
+    color: #fff; /* Adjust the color as needed */
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #ff004f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo::before,
+.logo::after {
+    content: '\f3fd'; /* This is a Unicode character for a stylized line. You can replace it with an icon or any other content you like. */
+    font-family: 'Font Awesome 5 Free'; /* Make sure you have Font Awesome included in your project for this to work. */
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.company-logo {
+    max-width: 120px;  /* Adjust the maximum width as needed */
+    height: auto;  /* Maintain the aspect ratio */
+    display: block;  /* Display logos as blocks (below the company names) */
+    margin-top: 5px;
+    margin-bottom: 15px;  /* Add spacing between logos and company names */
+}
+
+.company-logo-a {
+    max-width: 60px;  /* Adjust the maximum width as needed */
+    height: auto;  /* Maintain the aspect ratio */
+    display: block;  /* Display logos as blocks (below the company names) */
+    margin-top: 5px;
+    margin-bottom: 15px;  /* Add spacing between logos and company names */
+}
+
+.company-logo-b {
+    max-width: 80px;  /* Adjust the maximum width as needed */
+    height: auto;  /* Maintain the aspect ratio */
+    display: block;  /* Display logos as blocks (below the company names) */
+    margin-top: 5px;
+    margin-bottom: 15px;  /* Add spacing between logos and company names */
+}
+
+/* Navigation list item style */
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+/* Navigation link style */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+/* Navigation link hover effect */
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Header text styling */
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text p {
+    color: #FF8C00; /* Change this to your desired color code */
+    font-style: italic;
+    font-family: 'Your Desired Font', sans-serif; /* Replace 'Your Desired Font' with the actual font you want to use */
+}
+
+.header-text-slider p, .header-text-slider h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+/* About section styling */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+/* About section row layout */
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* About section column 1 styling */
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* About section column 2 styling */
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+/* About section sub-title styling */
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Tab titles and links styling */
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+/* Tab content styling */
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Services section styling */
+#services {
+    padding: 30px 0;
+}
+
+/* Services list layout */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/* Individual service item styling */
+.services-list div {
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30p;
+}
+
+/* Adjust h2 font color */
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #00ff00; /* Color for h2 */
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* Portfolio section styling */
+#portfolio {
+    padding: 50px 0;
+}
+
+/* Work list layout */
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/* Individual work item styling */
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+/* Overlay on work item hover */
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+/* Common button styling */
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #ff004f;
+}
+
+/* Contact section layout */
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-left a {
+    color: #0000EE; /* Replace with your desired color */
+}
+.contact-right {
+    flex-basis: 60%;
+}
+
+/* Contact information styling */
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+/* Social icons styling */
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+/* Secondary button style */
+.btn.btn2 {
+    display: inline-block;
+    background: #ff004f;
+    color: #ffffff;
+}
+
+/* Contact form and input styling */
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+/* Submit button styling */
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Copyright section styling */
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* Heart icon color */
+.copyright i {
+    color: #ff004f;
+}
+
+/* Navigation icon display for mobile devices */
+nav .fa-sharp {
+    display: none;
+}
+
+nav .fa-solid {
+    display: none;
+}
+
+/* Existing styles remain unchanged */
+
+#slider {
+    overflow: hidden;
+    height: 150px; /* Adjust the height as needed */
+    position: relative;
+    background: #080808; /* Adjust the background color as needed */
+    color: #fff; /* Adjust the text color as needed */
+    text-align: center;
+}
+
+.slider-text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: slide 15s infinite; /* Adjust the duration as needed */
+}
+
+.slider-text p {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+@keyframes slide {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-150px); /* Adjust the height as needed */
+    }
+    40%, 60% {
+        transform: translateY(-300px); /* Adjust the height as needed */
+    }
+    80% {
+        transform: translateY(-450px); /* Adjust the height as needed */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Adjust header background for smaller screens */
+    #header {
+        background-image: url(Images/FullSizeRender.png);
+        background-color: rgba(255, 140, 0, 0.8); /* Adjust the color and alpha (last value) as needed */
+    }
+
+    /* Adjust header text alignment */
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    /* Adjust header text size */
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    /* Display navigation icons for mobile */
+    nav .fa-sharp {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    /* Style for the slide-in menu */
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    /* Adjust navigation item display for mobile */
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    /* Positioning for mobile navigation close icon */
+    nav ul .fa-sharp {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    /* Adjust sub-title size for mobile */
+    .sub-title {
+        font-size: 40px;
+    }
+
+    /* Adjust about section column layout for mobile */
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    /* Margin for mobile layout */
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    /* Adjust font size for about section column 2 on mobile */
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    /* Adjust tab link size for mobile */
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    /* Adjust contact section layout for mobile */
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    /* Adjust copyright font size for mobile */
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+/* Success message style for contact form */
+#msg {
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
