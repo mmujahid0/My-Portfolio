@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06e6368556.js" crossorigin="anonymous"></script>
+
+    <style>
+        .header-text p,
+        .header-text h1,
+        .header-text span {
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">Mujahid</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>IAM and PAM Engineer</p>
+                <h1>Hi, I'm <span>Mujahid</span><br> From Malaysia</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/IMG_2220.PNG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am an enthusiastic, self-motivated, reliable, responsible and hard working person. I am a
+                        mature team worker and adaptable to all challenging situations. I am able to work well both in
+                        a team environment as well as using own initiative. I am able to work well under pressure.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certificate')">Certificate</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Web Design.</li>
+                            <li><span>Data Analytic</span><br>Data mining, analysis and reporting.</li>
+                            <li><span>Cybersecurity</span><br>Specializing in Managed PAM and IAM for robust digital security.</li>
+                            <li><span>Sql Database Script</span><br>Experienced in writing complex SQL queries for data retrieval, manipulation, and reporting.</li>
+                            <li><span>System Administrators</span><br>Managed and maintained all things related to system.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>February 2024 - Current</span><br>IAM and PAM Engineer.
+                                <img src="Images/footer-logo.png" class="company-logo">
+                            </li>
+                            <li>
+                                <span>September 2021 - January 2024</span><br>IT Executive at Mahnaz Food Sdn Bhd.
+                                <img src="Images/Mahnaz-food-logo.png" class="company-logo">
+                            </li>
+                            <li>
+                                <span>March 2021 - July 2021</span><br>System Support at P2 Digital Sdn Bhd.
+                                <img src="Images/p2-digital.png" class="company-logo-a">
+                            </li>
+                            <li>
+                                <span>November 2020 - February 2021</span><br>Electrical Technician at Chempaka Gading Engineering Sdn. Bhd.
+                                <img src="Images/Abstract Gear Engineering C Letter Free Logo (1).png" class="company-logo-a">
+                            </li>
+                            <li>
+                                <span>November 2017 - May 2018</span><br>Data Entry Clerk at Mujur Minat Sdn Bhd.
+                                <img src="Images/Mujur-Minat.PNG" class="company-logo-b">
+                            </li>
+                        </ul>
+                    </div>                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018 - 2021</span><br>Diploma In Digital Technology at Ungku Omar Polytechnic</li>
+                            <img src="Images/SMKKKlogo.png" class="company-logo-b">
+                            <li><span>2013 - 2017</span><br>Sijil Pelajaran Malaysia</li>
+                            <img src="Images/PUO.png" class="company-logo-b">
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certificate">
+                        <ul>
+                            <li><span></li>
+                            <li><span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Create a lasting impression with our professional web design services. We craft visually appealing and user-centric websites that reflect your brand identity. Elevate your online presence with a seamless blend of creativity and functionality.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chart-bar"></i>
+                    <h2>Data Analysis</h2>
+                    <p>Empower your business with our Data Analysis services. We excel in extracting valuable data and performing in-depth analysis to uncover meaningful insights.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-shield-alt"></i>
+                    <h2>Cybersecurity Expertise</h2>
+                    <p>Ensure the security of your digital assets with my cybersecurity expertise. Specializing in Managed PAM and IAM, I implement robust measures to safeguard privileged access and identities, bolstering your cyber defenses.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/www.reallygreatsite.com (1).png">
+                    <div class="layer">
+                        <h3>Web Design Project</h3>
+                        <p>Explore my portfolio for exceptional web design solutions that blend creativity and functionality seamlessly.</p>
+                        <a href="https://www.lalezar.my/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/www.reallygreatsite.com.png">
+                    <div class="layer">
+                        <h3>Data Analytic Project</h3>
+                        <p>Explore the power of data analytics and uncover valuable insights.</p>
+                        <a href="https://drive.google.com/drive/folders/17QT1N3Peq7_yAem23_aNyqRb1Br-E-hh?usp=sharing" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/www.reallygreatsite.com (3).png">
+                    <div class="layer">
+                        <h3>IT Systems Optimization Project</h3>
+                        <p>Enhanced overall operational efficiency through strategic IT systems optimization initiatives.</p>
+                        <a href="https://drive.google.com/drive/folders/1Y4-6SECLauhZ9ipEF5VrD1SAs-sPrUWe" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn btn2">See more</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i><a href="mailto:mujahidzaki2618@gmail.com">mujahidzaki2618@gmail.com</a></p>
+                    <p><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/60178708236" target="_blank">(WhatsApp)</a></p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/aina.gurlzz.5?mibextid=LQQJ4d" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://instagram.com/mmujahid._?igshid=MmIzYWVlNDQ5Yg==" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>                    
+                    <a href="Images/Mohammad Mujahid Bin Mohammad Zaki.pdf" target="_blank" class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <div id="msg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <div class="container">
+            <p>Copyright Mujahid © Made with <i class="fa-solid fa-heart"></i> My Portfolio</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px"
+        }
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyyvYNYxdaGweqb8TjhyZ-8sLDc-teuOdlO06MhKhwB7UGo_A0mu4nbLsF_uo2B23y0/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerText = "Message sent successfully";
+                    setTimeout(function () {
+                        msg.innerText = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
