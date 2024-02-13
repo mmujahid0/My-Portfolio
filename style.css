@@ -522,7 +522,6 @@ nav .fa-solid {
     /* Adjust header background for smaller screens */
     #header {
         background-image: url(Images/FullSizeRender.png);
-        background-color: rgba(255, 140, 0, 0.8); /* Adjust the color and alpha (last value) as needed */
     }
 
     /* Adjust header text alignment */
